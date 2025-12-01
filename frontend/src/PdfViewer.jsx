@@ -255,6 +255,9 @@ export default function PdfViewer() {
 
   const currentPageKey = currentPage - 1;
   const pageHighlights = fieldsByPage[currentPageKey] ?? [];
+  const selectedHighlights = selectedFieldIndex == null
+    ? []
+    : pageHighlights.filter(({ fieldIndex }) => fieldIndex === selectedFieldIndex);
   const hasPrev = currentPage > 1;
   const hasNext = pageCount > 0 && currentPage < pageCount;
 
@@ -293,7 +296,7 @@ export default function PdfViewer() {
           <div className="page-stage">
             <canvas ref={canvasRef} />
             <div className="overlay">
-              {pageHighlights.map(({ rect, fieldIndex, rectIndex }) => {
+              {selectedHighlights.map(({ rect, fieldIndex, rectIndex }) => {
                 const dims = currentPageDims?.page === currentPage ? currentPageDims : null;
                 const widthScale = dims ? dims.width / rect.page_width : scale;
                 const heightScale = dims ? dims.height / rect.page_height : scale;
@@ -304,12 +307,11 @@ export default function PdfViewer() {
                   height: (rect.y1 - rect.y0) * heightScale,
                 };
                 const id = `highlight-${fieldIndex}-${rect.page}-${rectIndex}`;
-                const isActive = selectedFieldIndex === fieldIndex;
                 return (
                   <div
                     key={id}
                     id={id}
-                    className={`highlight ${isActive ? "active" : ""}`}
+                    className="highlight active"
                     style={style}
                   />
                 );
