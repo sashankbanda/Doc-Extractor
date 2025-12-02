@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from typing import Dict, List, Sequence, Tuple
+import re
+from typing import Dict, List, Sequence, Tuple, Optional
 
 from .models import ExtractedField, FieldRect
 
@@ -20,22 +21,15 @@ def map_fields_to_rects(structured: Dict, raw_text: str, layout: Dict) -> Dict:
 
     for field in fields:
         label = field.get("label") or field.get("name") or "Unknown"
-        value = field.get("value", "")
-        snippet = field.get("snippet") or value
+        value = str(field.get("value", "")).strip()
+        snippet = str(field.get("snippet", "")).strip() or value
 
-        # Try exact match first, then fuzzy match
-        offsets = _find_exact_offsets(raw_text, snippet)
-        if not offsets:
-            offsets = _find_offsets(raw_text, snippet)
-        if not offsets and value and value != snippet:
-            # Try with value if snippet didn't match
-            offsets = _find_exact_offsets(raw_text, value)
-            if not offsets:
-                offsets = _find_offsets(raw_text, value)
+        # Try multiple matching strategies for better accuracy
+        offsets = _find_best_match(raw_text, snippet, value)
         
         rects: List[FieldRect] = []
         if offsets:
-            start, end = offsets[0]
+            start, end = offsets
             rects = _offset_to_rects(start, end, flat_chars, page_sizes)
 
         mapped_fields.append(
@@ -50,6 +44,50 @@ def map_fields_to_rects(structured: Dict, raw_text: str, layout: Dict) -> Dict:
     return {"fields": mapped_fields}
 
 
+def _find_best_match(raw_text: str, snippet: str, value: str) -> Optional[Tuple[int, int]]:
+    """Try multiple matching strategies to find the best match."""
+    
+    # Strategy 1: Exact match on snippet
+    offsets = _find_exact_offsets(raw_text, snippet)
+    if offsets:
+        return offsets[0]
+    
+    # Strategy 2: Exact match on value
+    if value and value != snippet:
+        offsets = _find_exact_offsets(raw_text, value)
+        if offsets:
+            return offsets[0]
+    
+    # Strategy 3: Case-insensitive match on snippet
+    offsets = _find_case_insensitive_offsets(raw_text, snippet)
+    if offsets:
+        return offsets[0]
+    
+    # Strategy 4: Case-insensitive match on value
+    if value and value != snippet:
+        offsets = _find_case_insensitive_offsets(raw_text, value)
+        if offsets:
+            return offsets[0]
+    
+    # Strategy 5: Normalized whitespace match
+    offsets = _find_normalized_offsets(raw_text, snippet)
+    if offsets:
+        return offsets[0]
+    
+    # Strategy 6: Try with value normalized
+    if value and value != snippet:
+        offsets = _find_normalized_offsets(raw_text, value)
+        if offsets:
+            return offsets[0]
+    
+    # Strategy 7: Fuzzy match - find longest matching substring
+    result = _find_fuzzy_match(raw_text, snippet if snippet else value)
+    if result:
+        return result
+    
+    return None
+
+
 def _flatten_chars(pages: Sequence[Dict]) -> List[Dict]:
     flat: List[Dict] = []
     for page in pages:
@@ -62,7 +100,7 @@ def _flatten_chars(pages: Sequence[Dict]) -> List[Dict]:
 def _find_exact_offsets(raw_text: str, snippet: str) -> List[Tuple[int, int]]:
     """Find exact match (case-sensitive) for the snippet."""
     snippet_clean = (snippet or "").strip()
-    if not snippet_clean:
+    if not snippet_clean or len(snippet_clean) < 2:
         return []
     offsets: List[Tuple[int, int]] = []
     start = raw_text.find(snippet_clean)
@@ -72,10 +110,10 @@ def _find_exact_offsets(raw_text: str, snippet: str) -> List[Tuple[int, int]]:
     return offsets
 
 
-def _find_offsets(raw_text: str, snippet: str) -> List[Tuple[int, int]]:
+def _find_case_insensitive_offsets(raw_text: str, snippet: str) -> List[Tuple[int, int]]:
     """Find case-insensitive match for the snippet."""
     snippet_clean = (snippet or "").strip()
-    if not snippet_clean:
+    if not snippet_clean or len(snippet_clean) < 2:
         return []
     haystack = raw_text.lower()
     needle = snippet_clean.lower()
@@ -85,6 +123,57 @@ def _find_offsets(raw_text: str, snippet: str) -> List[Tuple[int, int]]:
         offsets.append((start, start + len(snippet_clean)))
         start = haystack.find(needle, start + 1)
     return offsets
+
+
+def _find_normalized_offsets(raw_text: str, snippet: str) -> List[Tuple[int, int]]:
+    """Find match with normalized whitespace."""
+    snippet_clean = (snippet or "").strip()
+    if not snippet_clean or len(snippet_clean) < 2:
+        return []
+    
+    # Normalize whitespace in both texts
+    normalized_snippet = re.sub(r'\s+', ' ', snippet_clean.lower())
+    normalized_text = re.sub(r'\s+', ' ', raw_text.lower())
+    
+    start = normalized_text.find(normalized_snippet)
+    if start == -1:
+        return []
+    
+    # Map back to original text position (approximate)
+    # Count spaces before this position in normalized text
+    original_pos = 0
+    normalized_pos = 0
+    while normalized_pos < start and original_pos < len(raw_text):
+        if raw_text[original_pos].isspace():
+            if normalized_pos == 0 or normalized_text[normalized_pos - 1] != ' ':
+                normalized_pos += 1
+        else:
+            normalized_pos += 1
+        original_pos += 1
+    
+    return [(original_pos, original_pos + len(snippet_clean))]
+
+
+def _find_fuzzy_match(raw_text: str, snippet: str) -> Optional[Tuple[int, int]]:
+    """Find the longest matching substring using sliding window."""
+    snippet_clean = (snippet or "").strip()
+    if not snippet_clean or len(snippet_clean) < 3:
+        return None
+    
+    raw_lower = raw_text.lower()
+    snippet_lower = snippet_clean.lower()
+    
+    # Try to find progressively shorter substrings
+    min_match_len = max(3, len(snippet_clean) // 2)
+    
+    for length in range(len(snippet_clean), min_match_len - 1, -1):
+        for start_pos in range(len(snippet_clean) - length + 1):
+            substring = snippet_lower[start_pos:start_pos + length]
+            idx = raw_lower.find(substring)
+            if idx != -1:
+                return (idx, idx + length)
+    
+    return None
 
 
 def _offset_to_rects(
