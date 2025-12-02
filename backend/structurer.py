@@ -4,9 +4,15 @@ import json
 import logging
 import os
 import re
+from pathlib import Path
 from typing import Dict, List, Optional
 
 import requests
+from dotenv import load_dotenv
+
+# Load .env file from the project root
+env_path = Path(__file__).resolve().parent.parent / ".env"
+load_dotenv(dotenv_path=env_path)
 
 logger = logging.getLogger(__name__)
 GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions"
@@ -19,15 +25,22 @@ def structure_with_groq(raw_text: str) -> Dict:
         logger.warning("GROQ_API_KEY not configured; returning empty field set")
         return {"fields": []}
 
-    truncated_text = raw_text[:12000]
+    truncated_text = raw_text[:15000]
     system_prompt = (
-        "You are a document extraction assistant. Given the raw text of a PDF, "
-        "return JSON containing a list named 'fields'. Each field must include "
-        "label, value, snippet, and page (integer)."
+        "You are a document extraction assistant. Given the raw text of a PDF document, "
+        "extract EVERY piece of data you can find. Return JSON with a 'fields' array. "
+        "Each field MUST have: label (descriptive name), value (exact text from document), "
+        "snippet (the exact substring as it appears in the document - this is critical for highlighting). "
+        "For tables, use format: TableName[rowIndex].ColumnName as label. "
+        "Extract ALL data including: headers, policy info, names, dates, amounts, IDs, "
+        "table rows, totals, subtotals, claim details, descriptions, etc. "
+        "The snippet MUST be the EXACT text as it appears in the document for accurate highlighting."
     )
     user_prompt = (
-        "Extract structured key-value fields. Focus on policy numbers, names, "
-        "amounts, totals, and dates. Respond with compact JSON only.\n\n" + truncated_text
+        "Extract ALL structured data from this document. Include every field, table cell, "
+        "header, date, amount, name, ID, and description you find. "
+        "For each field, the 'snippet' must be the EXACT text from the document. "
+        "Respond with compact JSON only.\n\n" + truncated_text
     )
 
     payload = {

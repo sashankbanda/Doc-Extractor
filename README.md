@@ -21,7 +21,7 @@ End-to-end document ingestion stack using FastAPI, pdfplumber, PyMuPDF, EasyOCR,
 3. **Run API**
    ```cmd
    cd ..
-   uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
+   uvicorn backend.main:app --reload --host 0.0.0.0 --port 8001
    ```
    Or from the backend directory:
    ```cmd

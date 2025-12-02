@@ -1,0 +1,254 @@
+{
+  "fields": [
+    {
+      "label": "Policy Number",
+      "value": "P1234",
+      "snippet": "Policy NumberP1234",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 38.016,
+          "y0": 58.09679300000005,
+          "x1": 246.781304,
+          "y1": 67.17167099999995,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Policy Term",
+      "value": "6/1/2024 - 6/1/2025",
+      "snippet": "Policy Term6/1/2024 - 6/1/2025",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 448.416,
+          "y0": 58.09679300000005,
+          "x1": 594.4297279999998,
+          "y1": 66.863697,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Insured Name",
+      "value": "ABCAING HOMEC",
+      "snippet": "Insured NameABCAING HOMEC",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 38.016,
+          "y0": 72.49679300000003,
+          "x1": 293.63537,
+          "y1": 81.57167100000004,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Event Date",
+      "value": "8/6/18",
+      "snippet": "Event Date8/6/18",
+      "rects": []
+    },
+    {
+      "label": "Made Date",
+      "value": "8/6/18",
+      "snippet": "Made Date8/6/18",
+      "rects": []
+    },
+    {
+      "label": "Report Date",
+      "value": "8/6/18",
+      "snippet": "Report Date8/6/18",
+      "rects": []
+    },
+    {
+      "label": "Close Date",
+      "value": "8/6/18",
+      "snippet": "Close Date8/6/18",
+      "rects": []
+    },
+    {
+      "label": "Reopen Date",
+      "value": "Yt",
+      "snippet": "Reopen DateYt",
+      "rects": []
+    },
+    {
+      "label": "Gross Paid Loss",
+      "value": "$15,010",
+      "snippet": "Gross Paid Loss$15,010",
+      "rects": []
+    },
+    {
+      "label": "Gross Paid Expense",
+      "value": "$5,010",
+      "snippet": "Gross PaidExpense$5,010",
+      "rects": []
+    },
+    {
+      "label": "Gross Outstanding",
+      "value": "$10,000",
+      "snippet": "Gross Outstanding$10,000",
+      "rects": []
+    },
+    {
+      "label": "Gross Incurred Loss",
+      "value": "$15,010",
+      "snippet": "Gross Incurred Loss$15,010",
+      "rects": []
+    },
+    {
+      "label": "Policy Number",
+      "value": "P1234",
+      "snippet": "Policy NumberP1234",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 38.016,
+          "y0": 58.09679300000005,
+          "x1": 246.781304,
+          "y1": 67.17167099999995,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Policy Term",
+      "value": "12/12/2040 - 12/12/2050",
+      "snippet": "Policy Term12/12/2040 - 12/12/2050",
+      "rects": [
+        {
+          "page": 1,
+          "x0": 448.416,
+          "y0": 58.09679300000005,
+          "x1": 614.7707279999998,
+          "y1": 66.863697,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Insured Name",
+      "value": "ABCAING HOMECDivisionW",
+      "snippet": "Insured NameABCAING HOMECDivisionW",
+      "rects": [
+        {
+          "page": 1,
+          "x0": 38.016,
+          "y0": 72.49679300000003,
+          "x1": 292.72756000000004,
+          "y1": 94.99579300000005,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Event Date",
+      "value": "7/23/18",
+      "snippet": "Event Date7/23/18",
+      "rects": []
+    },
+    {
+      "label": "Made Date",
+      "value": "7/23/18",
+      "snippet": "Made Date7/23/18",
+      "rects": []
+    },
+    {
+      "label": "Report Date",
+      "value": "7/23/18",
+      "snippet": "Report Date7/23/18",
+      "rects": []
+    },
+    {
+      "label": "Close Date",
+      "value": "7/23/18",
+      "snippet": "Close Date7/23/18",
+      "rects": []
+    },
+    {
+      "label": "Gross Paid Loss",
+      "value": "$0",
+      "snippet": "Gross Paid Loss$0",
+      "rects": []
+    },
+    {
+      "label": "Gross Paid Expense",
+      "value": "$0",
+      "snippet": "Gross Paid Expense$0",
+      "rects": []
+    },
+    {
+      "label": "Gross Outstanding",
+      "value": "$0",
+      "snippet": "Gross Outstanding$0",
+      "rects": []
+    },
+    {
+      "label": "Gross Incurred Loss",
+      "value": "$0",
+      "snippet": "Gross Incurred Loss$0",
+      "rects": []
+    },
+    {
+      "label": "Subtotal",
+      "value": "$0",
+      "snippet": "Subtotal$0",
+      "rects": [
+        {
+          "page": 1,
+          "x0": 496.944,
+          "y0": 220.601,
+          "x1": 585.7540000000001,
+          "y1": 227.601,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Gross Paid Loss",
+      "value": "$26,580",
+      "snippet": "Gross Paid Loss$26,580",
+      "rects": []
+    },
+    {
+      "label": "Gross Paid Expense",
+      "value": "$1,580",
+      "snippet": "Gross Paid Expense$1,580",
+      "rects": []
+    },
+    {
+      "label": "Gross Outstanding",
+      "value": "$25,000",
+      "snippet": "Gross Outstanding$25,000",
+      "rects": []
+    },
+    {
+      "label": "Gross Incurred Loss",
+      "value": "$26,580",
+      "snippet": "Gross Incurred Loss$26,580",
+      "rects": []
+    },
+    {
+      "label": "Subtotal",
+      "value": "$242,267",
+      "snippet": "Subtotal$242,267",
+      "rects": []
+    },
+    {
+      "label": "Grand Total",
+      "value": "$242,267",
+      "snippet": "Grand Total$242,267",
+      "rects": []
+    }
+  ]
+}

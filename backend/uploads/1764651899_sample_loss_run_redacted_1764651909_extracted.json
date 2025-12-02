@@ -1,0 +1,392 @@
+{
+  "fields": [
+    {
+      "label": "Policy Number",
+      "value": "P1234",
+      "snippet": "Policy NumberP1234",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 38.016,
+          "y0": 58.09679300000005,
+          "x1": 246.781304,
+          "y1": 67.17167099999995,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Policy Term",
+      "value": "6/1/2024 - 6/1/2025",
+      "snippet": "Policy Term6/1/2024 - 6/1/2025",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 448.416,
+          "y0": 58.09679300000005,
+          "x1": 594.4297279999998,
+          "y1": 66.863697,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Insured Name",
+      "value": "ABCAING HOMEC",
+      "snippet": "Insured NameABCAING HOMEC",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 38.016,
+          "y0": 72.49679300000003,
+          "x1": 293.63537,
+          "y1": 81.57167100000004,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Division",
+      "value": "WERPACLTC - Long Term Care",
+      "snippet": "DivisionWERPACLTC - Long Term Care",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 38.016,
+          "y0": 86.896793,
+          "x1": 598.188927,
+          "y1": 95.97167100000001,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Master/Subsidiary Producer",
+      "value": "AAA UNDERWRITING PARTNERS",
+      "snippet": "Master/Subsidiary ProducerAAA UNDERWRITING PARTNERS",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 38.016,
+          "y0": 101.29679299999998,
+          "x1": 355.495713,
+          "y1": 110.37167099999999,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "MCC",
+      "value": "0081170 - Wholesale Medical",
+      "snippet": "MCC0081170 - Wholesale Medical",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 448.416,
+          "y0": 101.29679299999998,
+          "x1": 627.713236,
+          "y1": 109.295793,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Adjuster",
+      "value": "BCOY18",
+      "snippet": "AdjusterBCOY18",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 38.016,
+          "y0": 130.457,
+          "x1": 83.61099999999999,
+          "y1": 137.457,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Claim",
+      "value": "123",
+      "snippet": "Claim123",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 38.016,
+          "y0": 144.85700000000003,
+          "x1": 80.69899999999998,
+          "y1": 152.79899999999998,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Supervisor",
+      "value": "JJJ GGG",
+      "snippet": "SupervisorJJJ GGG",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 130.608,
+          "y0": 144.85700000000003,
+          "x1": 287.48,
+          "y1": 152.79899999999998,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Plant / Div Location CdSubLtr",
+      "value": "CdSubLtr",
+      "snippet": "Plant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA20246398/6/188/6/188/6/18YtSome loss description about this loss.SYDIAO$0$5,010$10,000$15,010BCOY18AdjusterGptClaim264235SupervisorGeminiPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA20253/29/1811/15/1811/15/185/1/19TYSome loss description about this loss and DGHYUC$0$0$0$0BCOY19Adjuster BertClaim204101Supervisor4o miniPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA202366391/23/191/23/191/23/19TNI dont know about this loss.ENTONO$0$77$20,000$20,077Version: BAR - Report Generated: 5/2/3023 19:13:44 AMValuation Date: 12/30/3023Loss Run ReportPage 1 of 2Policy NumberP1234Policy Term12/12/2040 - 12/12/2050Insured NameABCAING HOMECDivisionW - HU SpecialtyPACLTC - Long Term CareMaster/Subsidiary ProducerHEllo WordlMCC00000 - Wholesale MedicalBCOY19AdjusterDavidClaimJU675SupervisorWarnerPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO$0$1,580$25,000$26,580Subtotal$0$67,267$175,000$242,267Grand Total$0$67,267$175,000$242,267Version: BAR - Report Generated: 5/20/3023 19:13:44 AMValuation Date: 12/12/3023Loss Run ReportPage 2 of 2",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 201.89600000000002,
+          "y0": 159.257,
+          "x1": 211.143,
+          "y1": 166.257,
+          "page_width": 792.0,
+          "page_height": 612.0
+        },
+        {
+          "page": 0,
+          "x0": 45.432,
+          "y0": 171.71300000000002,
+          "x1": 58.998,
+          "y1": 178.71300000000002,
+          "page_width": 792.0,
+          "page_height": 612.0
+        },
+        {
+          "page": 0,
+          "x0": 47.376000000000005,
+          "y0": 180.209,
+          "x1": 57.008,
+          "y1": 187.209,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Occurrence ID",
+      "value": "ProcAIM",
+      "snippet": "Plant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA20246398/6/188/6/188/6/18YtSome loss description about this loss.SYDIAO$0$5,010$10,000$15,010BCOY18AdjusterGptClaim264235SupervisorGeminiPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA20253/29/1811/15/1811/15/185/1/19TYSome loss description about this loss and DGHYUC$0$0$0$0BCOY19Adjuster BertClaim204101Supervisor4o miniPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA202366391/23/191/23/191/23/19TNI dont know about this loss.ENTONO$0$77$20,000$20,077Version: BAR - Report Generated: 5/2/3023 19:13:44 AMValuation Date: 12/30/3023Loss Run ReportPage 1 of 2Policy NumberP1234Policy Term12/12/2040 - 12/12/2050Insured NameABCAING HOMECDivisionW - HU SpecialtyPACLTC - Long Term CareMaster/Subsidiary ProducerHEllo WordlMCC00000 - Wholesale MedicalBCOY19AdjusterDavidClaimJU675SupervisorWarnerPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO$0$1,580$25,000$26,580Subtotal$0$67,267$175,000$242,267Grand Total$0$67,267$175,000$242,267Version: BAR - Report Generated: 5/20/3023 19:13:44 AMValuation Date: 12/12/3023Loss Run ReportPage 2 of 2",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 132.84,
+          "y0": 171.71300000000002,
+          "x1": 147.92499999999998,
+          "y1": 178.71300000000002,
+          "page_width": 792.0,
+          "page_height": 612.0
+        },
+        {
+          "page": 0,
+          "x0": 133.632,
+          "y0": 180.209,
+          "x1": 147.247,
+          "y1": 187.209,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Event Date",
+      "value": "8/6/18",
+      "snippet": "Plant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA20246398/6/188/6/188/6/18YtSome loss description about this loss.SYDIAO$0$5,010$10,000$15,010BCOY18AdjusterGptClaim264235SupervisorGeminiPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA20253/29/1811/15/1811/15/185/1/19TYSome loss description about this loss and DGHYUC$0$0$0$0BCOY19Adjuster BertClaim204101Supervisor4o miniPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA202366391/23/191/23/191/23/19TNI dont know about this loss.ENTONO$0$77$20,000$20,077Version: BAR - Report Generated: 5/2/3023 19:13:44 AMValuation Date: 12/30/3023Loss Run ReportPage 1 of 2Policy NumberP1234Policy Term12/12/2040 - 12/12/2050Insured NameABCAING HOMECDivisionW - HU SpecialtyPACLTC - Long Term CareMaster/Subsidiary ProducerHEllo WordlMCC00000 - Wholesale MedicalBCOY19AdjusterDavidClaimJU675SupervisorWarnerPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO$0$1,580$25,000$26,580Subtotal$0$67,267$175,000$242,267Grand Total$0$67,267$175,000$242,267Version: BAR - Report Generated: 5/20/3023 19:13:44 AMValuation Date: 12/12/3023Loss Run ReportPage 2 of 2",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 157.104,
+          "y0": 203.46500000000003,
+          "x1": 181.24,
+          "y1": 210.46500000000003,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Made Date",
+      "value": "8/6/18",
+      "snippet": "Plant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA20246398/6/188/6/188/6/18YtSome loss description about this loss.SYDIAO$0$5,010$10,000$15,010BCOY18AdjusterGptClaim264235SupervisorGeminiPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA20253/29/1811/15/1811/15/185/1/19TYSome loss description about this loss and DGHYUC$0$0$0$0BCOY19Adjuster BertClaim204101Supervisor4o miniPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA202366391/23/191/23/191/23/19TNI dont know about this loss.ENTONO$0$77$20,000$20,077Version: BAR - Report Generated: 5/2/3023 19:13:44 AMValuation Date: 12/30/3023Loss Run ReportPage 1 of 2Policy NumberP1234Policy Term12/12/2040 - 12/12/2050Insured NameABCAING HOMECDivisionW - HU SpecialtyPACLTC - Long Term CareMaster/Subsidiary ProducerHEllo WordlMCC00000 - Wholesale MedicalBCOY19AdjusterDavidClaimJU675SupervisorWarnerPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO$0$1,580$25,000$26,580Subtotal$0$67,267$175,000$242,267Grand Total$0$67,267$175,000$242,267Version: BAR - Report Generated: 5/20/3023 19:13:44 AMValuation Date: 12/12/3023Loss Run ReportPage 2 of 2",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 157.104,
+          "y0": 203.46500000000003,
+          "x1": 181.24,
+          "y1": 210.46500000000003,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Report Date",
+      "value": "8/6/18",
+      "snippet": "Plant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA20246398/6/188/6/188/6/18YtSome loss description about this loss.SYDIAO$0$5,010$10,000$15,010BCOY18AdjusterGptClaim264235SupervisorGeminiPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA20253/29/1811/15/1811/15/185/1/19TYSome loss description about this loss and DGHYUC$0$0$0$0BCOY19Adjuster BertClaim204101Supervisor4o miniPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA202366391/23/191/23/191/23/19TNI dont know about this loss.ENTONO$0$77$20,000$20,077Version: BAR - Report Generated: 5/2/3023 19:13:44 AMValuation Date: 12/30/3023Loss Run ReportPage 1 of 2Policy NumberP1234Policy Term12/12/2040 - 12/12/2050Insured NameABCAING HOMECDivisionW - HU SpecialtyPACLTC - Long Term CareMaster/Subsidiary ProducerHEllo WordlMCC00000 - Wholesale MedicalBCOY19AdjusterDavidClaimJU675SupervisorWarnerPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO$0$1,580$25,000$26,580Subtotal$0$67,267$175,000$242,267Grand Total$0$67,267$175,000$242,267Version: BAR - Report Generated: 5/20/3023 19:13:44 AMValuation Date: 12/12/3023Loss Run ReportPage 2 of 2",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 157.104,
+          "y0": 203.46500000000003,
+          "x1": 181.24,
+          "y1": 210.46500000000003,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Close Date",
+      "value": "8/6/18",
+      "snippet": "Plant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA20246398/6/188/6/188/6/18YtSome loss description about this loss.SYDIAO$0$5,010$10,000$15,010BCOY18AdjusterGptClaim264235SupervisorGeminiPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA20253/29/1811/15/1811/15/185/1/19TYSome loss description about this loss and DGHYUC$0$0$0$0BCOY19Adjuster BertClaim204101Supervisor4o miniPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA202366391/23/191/23/191/23/19TNI dont know about this loss.ENTONO$0$77$20,000$20,077Version: BAR - Report Generated: 5/2/3023 19:13:44 AMValuation Date: 12/30/3023Loss Run ReportPage 1 of 2Policy NumberP1234Policy Term12/12/2040 - 12/12/2050Insured NameABCAING HOMECDivisionW - HU SpecialtyPACLTC - Long Term CareMaster/Subsidiary ProducerHEllo WordlMCC00000 - Wholesale MedicalBCOY19AdjusterDavidClaimJU675SupervisorWarnerPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO$0$1,580$25,000$26,580Subtotal$0$67,267$175,000$242,267Grand Total$0$67,267$175,000$242,267Version: BAR - Report Generated: 5/20/3023 19:13:44 AMValuation Date: 12/12/3023Loss Run ReportPage 2 of 2",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 157.104,
+          "y0": 203.46500000000003,
+          "x1": 181.24,
+          "y1": 210.46500000000003,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Reopen Date",
+      "value": "8/6/18",
+      "snippet": "Plant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA20246398/6/188/6/188/6/18YtSome loss description about this loss.SYDIAO$0$5,010$10,000$15,010BCOY18AdjusterGptClaim264235SupervisorGeminiPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA20253/29/1811/15/1811/15/185/1/19TYSome loss description about this loss and DGHYUC$0$0$0$0BCOY19Adjuster BertClaim204101Supervisor4o miniPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA202366391/23/191/23/191/23/19TNI dont know about this loss.ENTONO$0$77$20,000$20,077Version: BAR - Report Generated: 5/2/3023 19:13:44 AMValuation Date: 12/30/3023Loss Run ReportPage 1 of 2Policy NumberP1234Policy Term12/12/2040 - 12/12/2050Insured NameABCAING HOMECDivisionW - HU SpecialtyPACLTC - Long Term CareMaster/Subsidiary ProducerHEllo WordlMCC00000 - Wholesale MedicalBCOY19AdjusterDavidClaimJU675SupervisorWarnerPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO$0$1,580$25,000$26,580Subtotal$0$67,267$175,000$242,267Grand Total$0$67,267$175,000$242,267Version: BAR - Report Generated: 5/20/3023 19:13:44 AMValuation Date: 12/12/3023Loss Run ReportPage 2 of 2",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 157.104,
+          "y0": 203.46500000000003,
+          "x1": 181.24,
+          "y1": 210.46500000000003,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "State",
+      "value": "Y",
+      "snippet": "Plant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA20246398/6/188/6/188/6/18YtSome loss description about this loss.SYDIAO$0$5,010$10,000$15,010BCOY18AdjusterGptClaim264235SupervisorGeminiPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA20253/29/1811/15/1811/15/185/1/19TYSome loss description about this loss and DGHYUC$0$0$0$0BCOY19Adjuster BertClaim204101Supervisor4o miniPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA202366391/23/191/23/191/23/19TNI dont know about this loss.ENTONO$0$77$20,000$20,077Version: BAR - Report Generated: 5/2/3023 19:13:44 AMValuation Date: 12/30/3023Loss Run ReportPage 1 of 2Policy NumberP1234Policy Term12/12/2040 - 12/12/2050Insured NameABCAING HOMECDivisionW - HU SpecialtyPACLTC - Long Term CareMaster/Subsidiary ProducerHEllo WordlMCC00000 - Wholesale MedicalBCOY19AdjusterDavidClaimJU675SupervisorWarnerPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO$0$1,580$25,000$26,580Subtotal$0$67,267$175,000$242,267Grand Total$0$67,267$175,000$242,267Version: BAR - Report Generated: 5/20/3023 19:13:44 AMValuation Date: 12/12/3023Loss Run ReportPage 2 of 2",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 70.416,
+          "y0": 130.457,
+          "x1": 74.721,
+          "y1": 137.457,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Desc",
+      "value": "Some loss description about this loss.",
+      "snippet": "Plant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA20246398/6/188/6/188/6/18YtSome loss description about this loss.SYDIAO$0$5,010$10,000$15,010BCOY18AdjusterGptClaim264235SupervisorGeminiPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA20253/29/1811/15/1811/15/185/1/19TYSome loss description about this loss and DGHYUC$0$0$0$0BCOY19Adjuster BertClaim204101Supervisor4o miniPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA202366391/23/191/23/191/23/19TNI dont know about this loss.ENTONO$0$77$20,000$20,077Version: BAR - Report Generated: 5/2/3023 19:13:44 AMValuation Date: 12/30/3023Loss Run ReportPage 1 of 2Policy NumberP1234Policy Term12/12/2040 - 12/12/2050Insured NameABCAING HOMECDivisionW - HU SpecialtyPACLTC - Long Term CareMaster/Subsidiary ProducerHEllo WordlMCC00000 - Wholesale MedicalBCOY19AdjusterDavidClaimJU675SupervisorWarnerPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO$0$1,580$25,000$26,580Subtotal$0$67,267$175,000$242,267Grand Total$0$67,267$175,000$242,267Version: BAR - Report Generated: 5/20/3023 19:13:44 AMValuation Date: 12/12/3023Loss Run ReportPage 2 of 2",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 357.408,
+          "y0": 191.39299999999997,
+          "x1": 436.73199999999997,
+          "y1": 198.39299999999997,
+          "page_width": 792.0,
+          "page_height": 612.0
+        },
+        {
+          "page": 0,
+          "x0": 357.408,
+          "y0": 199.88899999999995,
+          "x1": 411.105,
+          "y1": 206.88899999999995,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Claimant",
+      "value": "Yt",
+      "snippet": "Plant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA20246398/6/188/6/188/6/18YtSome loss description about this loss.SYDIAO$0$5,010$10,000$15,010BCOY18AdjusterGptClaim264235SupervisorGeminiPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA20253/29/1811/15/1811/15/185/1/19TYSome loss description about this loss and DGHYUC$0$0$0$0BCOY19Adjuster BertClaim204101Supervisor4o miniPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA202366391/23/191/23/191/23/19TNI dont know about this loss.ENTONO$0$77$20,000$20,077Version: BAR - Report Generated: 5/2/3023 19:13:44 AMValuation Date: 12/30/3023Loss Run ReportPage 1 of 2Policy NumberP1234Policy Term12/12/2040 - 12/12/2050Insured NameABCAING HOMECDivisionW - HU SpecialtyPACLTC - Long Term CareMaster/Subsidiary ProducerHEllo WordlMCC00000 - Wholesale MedicalBCOY19AdjusterDavidClaimJU675SupervisorWarnerPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO$0$1,580$25,000$26,580Subtotal$0$67,267$175,000$242,267Grand Total$0$67,267$175,000$242,267Version: BAR - Report Generated: 5/20/3023 19:13:44 AMValuation Date: 12/12/3023Loss Run ReportPage 2 of 2",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 339.048,
+          "y0": 203.553,
+          "x1": 346.391,
+          "y1": 211.40699999999998,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Gross Paid Loss",
+      "value": "$15,010",
+      "snippet": "Plant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA20246398/6/188/6/188/6/18YtSome loss description about this loss.SYDIAO$0$5,010$10,000$15,010BCOY18AdjusterGptClaim264235SupervisorGeminiPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA20253/29/1811/15/1811/15/185/1/19TYSome loss description about this loss and DGHYUC$0$0$0$0BCOY19Adjuster BertClaim204101Supervisor4o miniPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA202366391/23/191/23/191/23/19TNI dont know about this loss.ENTONO$0$77$20,000$20,077Version: BAR - Report Generated: 5/2/3023 19:13:44 AMValuation Date: 12/30/3023Loss Run ReportPage 1 of 2Policy NumberP1234Policy Term12/12/2040 - 12/12/2050Insured NameABCAING HOMECDivisionW - HU SpecialtyPACLTC - Long Term CareMaster/Subsidiary ProducerHEllo WordlMCC00000 - Wholesale MedicalBCOY19AdjusterDavidClaimJU675SupervisorWarnerPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO$0$1,580$25,000$26,580Subtotal$0$67,267$175,000$242,267Grand Total$0$67,267$175,000$242,267Version: BAR - Report Generated: 5/20/3023 19:13:44 AMValuation Date: 12/12/3023Loss Run ReportPage 2 of 2",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 721.296,
+          "y0": 203.46500000000003,
+          "x1": 750.5070000000001,
+          "y1": 210.46500000000003,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Gross Paid Expense",
+      "value": "$10,000",
+      "snippet": "Plant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA20246398/6/188/6/188/6/18YtSome loss description about this loss.SYDIAO$0$5,010$10,000$15,010BCOY18AdjusterGptClaim264235SupervisorGeminiPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA20253/29/1811/15/1811/15/185/1/19TYSome loss description about this loss and DGHYUC$0$0$0$0BCOY19Adjuster BertClaim204101Supervisor4o miniPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA202366391/23/191/23/191/23/19TNI dont know about this loss.ENTONO$0$77$20,000$20,077Version: BAR - Report Generated: 5/2/3023 19:13:44 AMValuation Date: 12/30/3023Loss Run ReportPage 1 of 2Policy NumberP1234Policy Term12/12/2040 - 12/12/2050Insured NameABCAING HOMECDivisionW - HU SpecialtyPACLTC - Long Term CareMaster/Subsidiary ProducerHEllo WordlMCC00000 - Wholesale MedicalBCOY19AdjusterDavidClaimJU675SupervisorWarnerPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO$0$1,580$25,000$26,580Subtotal$0$67,267$175,000$242,267Grand Total$0$67,267$175,000$242,267Version: BAR - Report Generated: 5/20/3023 19:13:44 AMValuation Date: 12/12/3023Loss Run ReportPage 2 of 2",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 670.896,
+          "y0": 203.46500000000003,
+          "x1": 700.107,
+          "y1": 210.46500000000003,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Gross Outstanding",
+      "value": "$15,010",
+      "snippet": "Plant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA20246398/6/188/6/188/6/18YtSome loss description about this loss.SYDIAO$0$5,010$10,000$15,010BCOY18AdjusterGptClaim264235SupervisorGeminiPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA20253/29/1811/15/1811/15/185/1/19TYSome loss description about this loss and DGHYUC$0$0$0$0BCOY19Adjuster BertClaim204101Supervisor4o miniPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA202366391/23/191/23/191/23/19TNI dont know about this loss.ENTONO$0$77$20,000$20,077Version: BAR - Report Generated: 5/2/3023 19:13:44 AMValuation Date: 12/30/3023Loss Run ReportPage 1 of 2Policy NumberP1234Policy Term12/12/2040 - 12/12/2050Insured NameABCAING HOMECDivisionW - HU SpecialtyPACLTC - Long Term CareMaster/Subsidiary ProducerHEllo WordlMCC00000 - Wholesale MedicalBCOY19AdjusterDavidClaimJU675SupervisorWarnerPlant / Div Location CdSubLtrOccurrence IDProcAIMEvent DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO$0$1,580$25,000$26,580Subtotal$0$67,267$175,000$242,267Grand Total$0$67,267$175,000$242,267Version: BAR - Report Generated: 5/20/3023 19:13:44 AMValuation Date: 12/12/3023Loss Run ReportPage 2 of 2",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 721.296,
+          "y0": 203.46500000000003,
+          "x1": 750.5070000000001,
+          "y1": 210.46500000000003,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    }
+  ]
+}

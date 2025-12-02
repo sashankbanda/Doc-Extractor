@@ -1,0 +1,282 @@
+{
+  "fields": [
+    {
+      "label": "Policy Number",
+      "value": "P1234",
+      "snippet": "Policy NumberP1234",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 38.016,
+          "y0": 58.09679300000005,
+          "x1": 246.781304,
+          "y1": 67.17167099999995,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Policy Term",
+      "value": "6/1/2024 - 6/1/2025",
+      "snippet": "Policy Term6/1/2024 - 6/1/2025",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 448.416,
+          "y0": 58.09679300000005,
+          "x1": 594.4297279999998,
+          "y1": 66.863697,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Insured Name",
+      "value": "ABCAING HOMEC",
+      "snippet": "Insured NameABCAING HOMEC",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 38.016,
+          "y0": 72.49679300000003,
+          "x1": 293.63537,
+          "y1": 81.57167100000004,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Event Date",
+      "value": "8/6/18",
+      "snippet": "Event Date8/6/18",
+      "rects": []
+    },
+    {
+      "label": "Made Date",
+      "value": "8/6/18",
+      "snippet": "Made Date8/6/18",
+      "rects": []
+    },
+    {
+      "label": "Report Date",
+      "value": "8/6/18",
+      "snippet": "Report Date8/6/18",
+      "rects": []
+    },
+    {
+      "label": "Close Date",
+      "value": "8/6/18",
+      "snippet": "Close Date8/6/18",
+      "rects": []
+    },
+    {
+      "label": "Reopen Date",
+      "value": "Y",
+      "snippet": "Reopen DateReopen DateStateDescClaimantStsGross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA20246398/6/188/6/188/6/18Yt",
+      "rects": []
+    },
+    {
+      "label": "Gross Paid Loss",
+      "value": "A20246",
+      "snippet": "Gross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA20246398/6/188/6/188/6/18Yt",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 49.824,
+          "y0": 171.71300000000002,
+          "x1": 754.685,
+          "y1": 211.76,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Gross Paid Expense",
+      "value": "398",
+      "snippet": "Gross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA20246398/6/188/6/188/6/18Yt",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 49.824,
+          "y0": 171.71300000000002,
+          "x1": 754.685,
+          "y1": 211.76,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Gross Outstanding",
+      "value": "10,000",
+      "snippet": "Gross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA20246398/6/188/6/188/6/18Yt",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 49.824,
+          "y0": 171.71300000000002,
+          "x1": 754.685,
+          "y1": 211.76,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Gross Incurred Loss",
+      "value": "15,010",
+      "snippet": "Gross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA20246398/6/188/6/188/6/18Yt",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 49.824,
+          "y0": 171.71300000000002,
+          "x1": 754.685,
+          "y1": 211.76,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Policy Number",
+      "value": "P1234",
+      "snippet": "Policy NumberP1234",
+      "rects": [
+        {
+          "page": 0,
+          "x0": 38.016,
+          "y0": 58.09679300000005,
+          "x1": 246.781304,
+          "y1": 67.17167099999995,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Policy Term",
+      "value": "12/12/2040 - 12/12/2050",
+      "snippet": "Policy Term12/12/2040 - 12/12/2050",
+      "rects": [
+        {
+          "page": 1,
+          "x0": 448.416,
+          "y0": 58.09679300000005,
+          "x1": 614.7707279999998,
+          "y1": 66.863697,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Insured Name",
+      "value": "ABCAING HOMECDivisionW",
+      "snippet": "Insured NameABCAING HOMECDivisionW",
+      "rects": [
+        {
+          "page": 1,
+          "x0": 38.016,
+          "y0": 72.49679300000003,
+          "x1": 292.72756000000004,
+          "y1": 94.99579300000005,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Event Date",
+      "value": "7/23/18",
+      "snippet": "Event DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO",
+      "rects": [
+        {
+          "page": 1,
+          "x0": 49.824,
+          "y0": 171.71300000000002,
+          "x1": 754.685,
+          "y1": 202.911,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Made Date",
+      "value": "7/23/18",
+      "snippet": "Event DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO",
+      "rects": [
+        {
+          "page": 1,
+          "x0": 49.824,
+          "y0": 171.71300000000002,
+          "x1": 754.685,
+          "y1": 202.911,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Report Date",
+      "value": "5/6/19",
+      "snippet": "Event DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO",
+      "rects": [
+        {
+          "page": 1,
+          "x0": 49.824,
+          "y0": 171.71300000000002,
+          "x1": 754.685,
+          "y1": 202.911,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Close Date",
+      "value": "5/6/19",
+      "snippet": "Event DateMade DateReport DateClose DateReopen DateStateDescClaimantStsGross Paid LossGross Paid ExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO",
+      "rects": [
+        {
+          "page": 1,
+          "x0": 49.824,
+          "y0": 171.71300000000002,
+          "x1": 754.685,
+          "y1": 202.911,
+          "page_width": 792.0,
+          "page_height": 612.0
+        }
+      ]
+    },
+    {
+      "label": "Gross Paid Loss",
+      "value": "A6785gd6",
+      "snippet": "Gross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO",
+      "rects": []
+    },
+    {
+      "label": "Gross Paid Expense",
+      "value": "1,580",
+      "snippet": "Gross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO",
+      "rects": []
+    },
+    {
+      "label": "Gross Outstanding",
+      "value": "25,000",
+      "snippet": "Gross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO",
+      "rects": []
+    },
+    {
+      "label": "Gross Incurred Loss",
+      "value": "26,580",
+      "snippet": "Gross Paid LossGross PaidExpenseGross OutstandingGross Incurred LossA6785gd6397/23/185/6/195/6/19NYNEGLIGENT CAREFREINAO",
+      "rects": []
+    }
+  ]
+}
