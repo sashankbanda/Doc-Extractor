@@ -737,6 +737,138 @@ table tr:last-child td {
   background: transparent;
 }
 
+/* Accordion Styles */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.accordion-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.accordion-item:hover {
+  border-color: var(--border-hover);
+}
+
+.accordion-item.open {
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: transparent;
+  border: none;
+  color: var(--text-main);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  text-align: left;
+}
+
+.accordion-trigger:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.accordion-trigger-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.accordion-content {
+  border-top: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.accordion-content-inner {
+  padding: 0;
+}
+
+/* Accordion Table */
+.accordion-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.accordion-table tr {
+  transition: background 0.2s ease;
+}
+
+.accordion-table tr.clickable {
+  cursor: pointer;
+}
+
+.accordion-table tr.clickable:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.accordion-table tr.active {
+  background: rgba(99, 102, 241, 0.12);
+}
+
+.accordion-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  font-size: 13px;
+}
+
+.accordion-table tr:last-child td {
+  border-bottom: none;
+}
+
+.accordion-table td.field-name {
+  width: 45%;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.accordion-table td.field-value {
+  text-align: right;
+  font-family: var(--font-mono);
+  color: white;
+  font-size: 13px;
+}
+
+.accordion-table td.field-value.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Group badge in accordion */
+.group-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  background: rgba(99, 102, 241, 0.2);
+  color: var(--primary);
+}
+
+.group-count {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
 .badge {
   padding: 4px 10px;
   border-radius: 999px;

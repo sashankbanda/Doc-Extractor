@@ -3,6 +3,12 @@ import pdfjsWorker from "pdfjs-dist/build/pdf.worker.mjs?url";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { fileUrl } from "./api.js";
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "./components/ui/Accordion.jsx";
 
 GlobalWorkerOptions.workerSrc = pdfjsWorker;
 
@@ -145,11 +151,13 @@ export default function PdfViewer() {
     [fields]
   );
 
-  // Group fields by sections - now shows ALL fields in tabular format
-  const { cardSections, tableSections, allFieldsTable } = useMemo(() => {
+  // Group fields by sections with accordion support
+  const { cardSections, tableSections, allFieldsTable, accordionGroups, standaloneFields } = useMemo(() => {
     const cardMap = new Map();
     const tableMap = new Map();
     const allFields = [];
+    const groupedFields = new Map(); // For accordion grouping
+    const standalone = []; // Fields without group pattern
 
     annotatedFields.forEach((field) => {
       const label = field.label || "";
@@ -160,6 +168,29 @@ export default function PdfViewer() {
         field,
       });
 
+      // Check for group pattern like "Claims[0] Claim Number" or "Claims[0].ClaimNumber"
+      const groupMatch = label.match(/^([a-zA-Z0-9_\s]+)\[(\d+)\][\s.]*(.*)$/);
+      if (groupMatch) {
+        const [, groupNameRaw, rowIndex, fieldNameRaw] = groupMatch;
+        const groupName = groupNameRaw.trim();
+        const groupKey = `${groupName}[${rowIndex}]`;
+        const fieldName = prettify(fieldNameRaw || "Value");
+        
+        if (!groupedFields.has(groupKey)) {
+          groupedFields.set(groupKey, {
+            groupName,
+            rowIndex: parseInt(rowIndex, 10),
+            fields: [],
+          });
+        }
+        groupedFields.get(groupKey).fields.push({
+          displayLabel: fieldName,
+          field,
+        });
+        return;
+      }
+
+      // Check for table pattern (legacy)
       const tableMatch = label.match(/^([a-zA-Z0-9_]+)\[(\d+)]\.(.+)$/);
       if (tableMatch) {
         const [, groupRaw, rowIndex, colRaw] = tableMatch;
@@ -176,12 +207,38 @@ export default function PdfViewer() {
         return;
       }
 
+      // Check for dot-separated groups
       const [maybeGroup, maybeField] = label.split(".", 2);
-      const groupName = maybeField ? prettify(maybeGroup) : "Key Fields";
-      const displayLabel = prettify(maybeField || label || `Field ${field._index + 1}`);
-      if (!cardMap.has(groupName)) cardMap.set(groupName, []);
-      cardMap.get(groupName).push({ displayLabel, field });
+      if (maybeField) {
+        const groupName = prettify(maybeGroup);
+        const displayLabel = prettify(maybeField);
+        if (!cardMap.has(groupName)) cardMap.set(groupName, []);
+        cardMap.get(groupName).push({ displayLabel, field });
+      } else {
+        // Standalone field
+        standalone.push({
+          displayLabel: prettify(label || `Field ${field._index + 1}`),
+          field,
+        });
+      }
     });
+
+    // Convert grouped fields to accordion format, sorted by group name then row index
+    const accordions = Array.from(groupedFields.entries())
+      .sort((a, b) => {
+        const aData = a[1];
+        const bData = b[1];
+        const nameCompare = aData.groupName.localeCompare(bData.groupName);
+        if (nameCompare !== 0) return nameCompare;
+        return aData.rowIndex - bData.rowIndex;
+      })
+      .map(([key, data]) => ({
+        key,
+        title: `${prettify(data.groupName)} ${data.rowIndex}`,
+        groupName: data.groupName,
+        rowIndex: data.rowIndex,
+        fields: data.fields,
+      }));
 
     const cards = Array.from(cardMap.entries())
       .sort((a, b) => a[0].localeCompare(b[0]))
@@ -197,7 +254,13 @@ export default function PdfViewer() {
           .map(([rowIndex, row]) => ({ rowIndex, row })),
       }));
 
-    return { cardSections: cards, tableSections: tables, allFieldsTable: allFields };
+    return { 
+      cardSections: cards, 
+      tableSections: tables, 
+      allFieldsTable: allFields,
+      accordionGroups: accordions,
+      standaloneFields: standalone,
+    };
   }, [annotatedFields]);
 
   // Filter fields by search
@@ -226,6 +289,34 @@ export default function PdfViewer() {
         (item.field.value || "").toLowerCase().includes(term)
     );
   }, [allFieldsTable, searchTerm]);
+
+  // Filter accordion groups by search
+  const filteredAccordionGroups = useMemo(() => {
+    if (!searchTerm) return accordionGroups;
+    const term = searchTerm.toLowerCase();
+    return accordionGroups
+      .map((group) => ({
+        ...group,
+        fields: group.fields.filter(
+          (item) =>
+            item.displayLabel.toLowerCase().includes(term) ||
+            (item.field.value || "").toLowerCase().includes(term) ||
+            group.title.toLowerCase().includes(term)
+        ),
+      }))
+      .filter((group) => group.fields.length > 0);
+  }, [accordionGroups, searchTerm]);
+
+  // Filter standalone fields by search
+  const filteredStandaloneFields = useMemo(() => {
+    if (!searchTerm) return standaloneFields;
+    const term = searchTerm.toLowerCase();
+    return standaloneFields.filter(
+      (item) =>
+        item.displayLabel.toLowerCase().includes(term) ||
+        (item.field.value || "").toLowerCase().includes(term)
+    );
+  }, [standaloneFields, searchTerm]);
 
   const handleSelectField = (field) => {
     setSelectedFieldIndex(field._index);
@@ -409,113 +500,144 @@ export default function PdfViewer() {
           <div className="data-scroll-inner">
             {loadingFields && <span className="badge">Loading…</span>}
 
-            {filteredAllFields.length === 0 && !loadingFields ? (
+            {filteredAccordionGroups.length === 0 && filteredStandaloneFields.length === 0 && filteredCardSections.length === 0 && !loadingFields ? (
               <div className="viewer-empty">
                 <p className="muted">No structured fields available.</p>
               </div>
             ) : null}
 
-            {/* All Extracted Fields Table */}
-            {filteredAllFields.length > 0 && (
+            {/* Standalone Fields (non-grouped) */}
+            {filteredStandaloneFields.length > 0 && (
               <div className="table-section">
                 <div className="section-header">
-                  <h3>All Extracted Fields ({filteredAllFields.length})</h3>
+                  <h3>General Fields ({filteredStandaloneFields.length})</h3>
                 </div>
                 <div className="table-wrapper">
-                  <table className="all-fields-table">
+                  <table className="accordion-table">
+                    <tbody>
+                      {filteredStandaloneFields.map(({ displayLabel, field }) => {
+                        const isActive = selectedFieldIndex === field._index;
+                        const hasLocation = field.rects && field.rects.length > 0;
+                        return (
+                          <tr
+                            key={field._index}
+                            className={`${isActive ? "active" : ""} ${hasLocation ? "clickable" : ""}`}
+                            onClick={() => hasLocation && handleSelectField(field)}
+                          >
+                            <td className="field-name">{displayLabel}</td>
+                            <td className={`field-value ${isActive ? "active" : ""}`}>
+                              {field.value || "—"}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+
+            {/* Accordion Groups (Claims[0], Claims[1], etc.) */}
+            {filteredAccordionGroups.length > 0 && (
+              <Accordion type="single" collapsible>
+                {filteredAccordionGroups.map((group) => (
+                  <AccordionItem key={group.key} value={group.key}>
+                    <AccordionTrigger>
+                      <span className="group-badge">{group.rowIndex}</span>
+                      {prettify(group.groupName)}
+                      <span className="group-count">({group.fields.length} fields)</span>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <table className="accordion-table">
+                        <tbody>
+                          {group.fields.map(({ displayLabel, field }) => {
+                            const isActive = selectedFieldIndex === field._index;
+                            const hasLocation = field.rects && field.rects.length > 0;
+                            return (
+                              <tr
+                                key={field._index}
+                                className={`${isActive ? "active" : ""} ${hasLocation ? "clickable" : ""}`}
+                                onClick={() => hasLocation && handleSelectField(field)}
+                              >
+                                <td className="field-name">{displayLabel}</td>
+                                <td className={`field-value ${isActive ? "active" : ""}`}>
+                                  {field.value || "—"}
+                                </td>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            )}
+
+            {/* Grouped Card Sections */}
+            {filteredCardSections.map((section) => (
+              <div className="card-section" key={section.title}>
+                <div className="section-header">
+                  <h3>{section.title}</h3>
+                </div>
+                <div className="card-grid">
+                  {section.items.map(({ displayLabel, field }) => (
+                    <button
+                      type="button"
+                      key={`${field._index}-${displayLabel}`}
+                      className={`field-card ${selectedFieldIndex === field._index ? "active" : ""}`}
+                      onClick={() => handleSelectField(field)}
+                    >
+                      <span className="field-label">{displayLabel}</span>
+                      <span className="field-value">{field.value || "—"}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            {/* Table Sections */}
+            {tableSections.map((section) => (
+              <div className="table-section" key={section.title}>
+                <div className="section-header">
+                  <h3>{section.title}</h3>
+                </div>
+                <div className="table-wrapper">
+                  <table>
                     <thead>
                       <tr>
-                        <th>Field Name</th>
-                        <th>Value</th>
+                        {section.columns.map((col) => (
+                          <th key={col}>{col}</th>
+                        ))}
                       </tr>
                     </thead>
-                  <tbody>
-                    {filteredAllFields.map(({ displayLabel, field }) => {
-                      const isActive = selectedFieldIndex === field._index;
-                      const hasLocation = field.rects && field.rects.length > 0;
-                      return (
-                        <tr
-                          key={field._index}
-                          className={`field-row ${isActive ? "active" : ""} ${hasLocation ? "clickable" : ""}`}
-                          onClick={() => hasLocation && handleSelectField(field)}
-                        >
-                          <td className="field-name">{displayLabel}</td>
-                          <td className={`field-value ${isActive ? "active" : ""}`}>
-                            {field.value || "—"}
-                          </td>
+                    <tbody>
+                      {section.rows.map(({ rowIndex, row }) => (
+                        <tr key={rowIndex}>
+                          {section.columns.map((col) => {
+                            const cell = row.get(col);
+                            const value = cell?.value ?? "—";
+                            const field = cell?.field;
+                            const isActive = field && selectedFieldIndex === field._index;
+                            return (
+                              <td
+                                key={`${rowIndex}-${col}`}
+                                className={isActive ? "active" : ""}
+                                onClick={() => field && handleSelectField(field)}
+                              >
+                                {value}
+                              </td>
+                            );
+                          })}
                         </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          )}
-
-          {/* Grouped Card Sections */}
-          {filteredCardSections.map((section) => (
-            <div className="card-section" key={section.title}>
-              <div className="section-header">
-                <h3>{section.title}</h3>
-              </div>
-              <div className="card-grid">
-                {section.items.map(({ displayLabel, field }) => (
-                  <button
-                    type="button"
-                    key={`${field._index}-${displayLabel}`}
-                    className={`field-card ${selectedFieldIndex === field._index ? "active" : ""}`}
-                    onClick={() => handleSelectField(field)}
-                  >
-                    <span className="field-label">{displayLabel}</span>
-                    <span className="field-value">{field.value || "—"}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-          ))}
-
-          {/* Table Sections */}
-          {tableSections.map((section) => (
-            <div className="table-section" key={section.title}>
-              <div className="section-header">
-                <h3>{section.title}</h3>
-              </div>
-              <div className="table-wrapper">
-                <table>
-                  <thead>
-                    <tr>
-                      {section.columns.map((col) => (
-                        <th key={col}>{col}</th>
                       ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {section.rows.map(({ rowIndex, row }) => (
-                      <tr key={rowIndex}>
-                        {section.columns.map((col) => {
-                          const cell = row.get(col);
-                          const value = cell?.value ?? "—";
-                          const field = cell?.field;
-                          const isActive = field && selectedFieldIndex === field._index;
-                          return (
-                            <td
-                              key={`${rowIndex}-${col}`}
-                              className={isActive ? "active" : ""}
-                              onClick={() => field && handleSelectField(field)}
-                            >
-                              {value}
-                            </td>
-                          );
-                        })}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </tbody>
+                  </table>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
 
-          {error && <p className="error">{error}</p>}
+            {error && <p className="error">{error}</p>}
           </div>
         </div>
       </section>
